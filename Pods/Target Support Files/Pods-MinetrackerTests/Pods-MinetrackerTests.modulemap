@@ -1,0 +1,6 @@
+framework module Pods_MinetrackerTests {
+  umbrella header "Pods-MinetrackerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

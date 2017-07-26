@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
+    </dependencies>
+    <scenes>
+        <!--Minetracker-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="Minetracker" title="Minetracker" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Watch_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="yEi-0S-bdM">
+                            <items>
+                                <button width="1" alignment="center" title="Mojang Status" id="HgU-TJ-atL">
+                                    <connections>
+                                        <segue destination="EyZ-3z-WqL" kind="push" id="0Te-bW-XnS"/>
+                                    </connections>
+                                </button>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="25" bottom="0.0"/>
+                        </group>
+                        <group width="1" alignment="left" id="kfC-da-QmW">
+                            <items>
+                                <button width="1" alignment="left" title="Server Status" id="OpX-fj-c5w">
+                                    <connections>
+                                        <segue destination="MGj-J8-V6o" kind="push" id="qo8-Fz-lr1"/>
+                                    </connections>
+                                </button>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="5" bottom="0.0"/>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="197" y="230"/>
+        </scene>
+        <!--serverStatus-->
+        <scene sceneID="HS7-5d-tCj">
+            <objects>
+                <controller identifier="serverStatus" id="MGj-J8-V6o"/>
+            </objects>
+            <point key="canvasLocation" x="197" y="556"/>
+        </scene>
+        <!--mojangStatus-->
+        <scene sceneID="mQt-lm-wpM">
+            <objects>
+                <controller identifier="mojangStatus" id="EyZ-3z-WqL" customClass="MojangInterfaceController" customModule="Watch_Extension">
+                    <items>
+                        <table alignment="left" id="8VQ-So-0oG">
+                            <items>
+                                <tableRow identifier="MojangStatusRow" selectable="NO" id="v6S-e5-vOp" customClass="MojangTableRowController" customModule="Watch_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" spacing="6" id="RFB-Wv-bcE">
+                                        <items>
+                                            <separator height="1" heightAdjustment="-4" alignment="left" verticalAlignment="center" id="EBY-C7-5YX">
+                                                <color key="color" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </separator>
+                                            <group alignment="left" layout="vertical" spacing="0.0" id="hGI-Lg-SPL">
+                                                <items>
+                                                    <group width="1" height="25" alignment="left" spacing="4" id="xvf-Ik-vIT">
+                                                        <items>
+                                                            <label alignment="left" text="Loading..." id="jxt-25-dc1">
+                                                                <fontDescription key="font" type="system" weight="semibold" pointSize="15"/>
+                                                            </label>
+                                                        </items>
+                                                        <edgeInsets key="margins" left="0.0" right="0.0" top="4" bottom="0.0"/>
+                                                    </group>
+                                                    <group width="1" alignment="left" id="ntR-Aw-9Z7">
+                                                        <items>
+                                                            <label alignment="left" text="Loading..." id="cde-x7-Ko5"/>
+                                                        </items>
+                                                        <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="4"/>
+                                                    </group>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="statusLabel" destination="cde-x7-Ko5" id="iFo-Em-01w"/>
+                                        <outlet property="statusSeparator" destination="EBY-C7-5YX" id="ncu-h5-PvZ"/>
+                                        <outlet property="websiteLabel" destination="jxt-25-dc1" id="a3f-f9-Oa6"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="mojangStatusTable" destination="8VQ-So-0oG" id="A8f-Yw-Xmk"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="453" y="230"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+</document>

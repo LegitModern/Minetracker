@@ -1,0 +1,9 @@
+[submodule "Alamofire"]
+	path = Alamofire
+	url = https://github.com/Alamofire/Alamofire.git
+[submodule "SwiftyJSON"]
+	path = SwiftyJSON
+	url = https://github.com/SwiftyJSON/SwiftyJSON.git
+[submodule "MBProgressHUD"]
+	path = MBProgressHUD
+	url = https://github.com/jdg/MBProgressHUD.git
